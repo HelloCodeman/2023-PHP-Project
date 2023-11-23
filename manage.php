@@ -46,19 +46,40 @@ include_once "db.php";
             </tr>
             <?php
             foreach ($files as $file) {
+                switch ($file['type']) {
+                    case "image/webp":
+                    case "image/jpeg":
+                    case "image/png":
+                    case "image/gif":
+                    case "image/bmp":
+                        $imgname = "./img/" . $file['name'];
+                        break;
+                    case 'msword':
+                        $imgname = "./icon/wordicon.png";
+                        break;
+                    case 'msexcel':
+                        $imgname = "./icon/msexcel.png";
+                        break;
+                    case 'msppt':
+                        $imgname = "./icon/msppt.png";
+                        break;
+                    case 'pdf':
+                        $imgname = "./icon/pdf.png";
+                        break;
+                    default:
+                        $imgname = "./icon/other.png";
+                }
             ?>
                 <tr>
                     <td><?= $file['id']; ?></td>
-                    <td><img class='thumbs' src="img/<?= $file['name']; ?>"></td>
+                    <td><img class='thumbs' src="<?= $imgname; ?>"></td>
                     <td><?= $file['type']; ?></td>
                     <td><?= $file['size']; ?></td>
                     <td><?= $file['desc']; ?></td>
                     <td><?= $file['create_at']; ?></td>
                     <td>
-                    <td>
                         <button class="btn btn-info">編輯</button>
                         <button class="btn btn-danger">刪除</button>
-                    </td>
                     </td>
                 </tr>
             <?php
