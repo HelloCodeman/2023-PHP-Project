@@ -1,11 +1,6 @@
 <?php
 
-/**
- * 1.建立表單
- * 2.建立處理檔案程式
- * 3.搬移檔案
- * 4.顯示檔案列表
- */
+include_once "db.php";
 
 ?>
 <!DOCTYPE html>
@@ -31,11 +26,12 @@
 
     ?>
     <div class=""></div>
-    <form action="./api/upload.php" method="post" enctype="multipart/form-data" style="text-align: center;">
+    <form action="./api/edit_file.php" method="post" enctype="multipart/form-data" style="text-align: center;">
 
         <input type="file" name="img" id="">
-        <input type="text" name="desc" value="" placeholder="請輸入檔案描述">
-        <input type="submit" value="上傳">
+        <input type="text" name="name" value="">
+        <input type="text" name="desc" value="">
+        <input type="submit" value="更新">
 
     </form>
 
