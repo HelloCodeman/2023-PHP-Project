@@ -79,7 +79,7 @@ include_once "db.php";
                     <td><?= $file['create_at']; ?></td>
                     <td>
                         <button class="btn btn-info">編輯</button>
-                        <button class="btn btn-danger">刪除</button>
+                        <button class="btn btn-danger"><a href='./api/del_file.php?id=<?= $file['id']; ?>'>刪除</a></button>
                     </td>
                 </tr>
             <?php
