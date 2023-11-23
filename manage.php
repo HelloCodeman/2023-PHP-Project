@@ -24,7 +24,7 @@ include_once "db.php";
 <body>
     <h1 class="header">檔案管理練習</h1>
     <!----建立上傳檔案表單及相關的檔案資訊存入資料表機制----->
-    <h3><a href="upload.php">上傳檔案</a></h3>
+    <h3 style="text-align: center;"><a href="upload.php">上傳檔案</a></h3>
 
 
 
