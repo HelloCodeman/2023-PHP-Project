@@ -42,6 +42,7 @@ include_once "db.php";
                 <td>大小</td>
                 <td>描述</td>
                 <td>上傳時間</td>
+                <td>操作</td>
             </tr>
             <?php
             foreach ($files as $file) {
@@ -53,6 +54,12 @@ include_once "db.php";
                     <td><?= $file['size']; ?></td>
                     <td><?= $file['desc']; ?></td>
                     <td><?= $file['create_at']; ?></td>
+                    <td>
+                    <td>
+                        <button class="btn btn-info">編輯</button>
+                        <button class="btn btn-danger">刪除</button>
+                    </td>
+                    </td>
                 </tr>
             <?php
             }
