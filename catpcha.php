@@ -194,6 +194,8 @@
   ?>
 
   <img src="<?= captcha(code(5)); ?>" alt="" style="border:2px solid green">
+
+
 </body>
 
 </html>
